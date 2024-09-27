@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smart_paper/core/theme/app_pallet.dart';
 import 'package:smart_paper/features/login-register/presentation/pages/SIgnUp.dart';
 import 'package:smart_paper/features/login-register/presentation/widgits/auth_field.dart';
-import 'package:smart_paper/features/login-register/presentation/widgits/auth_gradient_button.dart';
+
 import 'package:smart_paper/features/login-register/presentation/widgits/pass_field.dart';
 
 class LoginPage extends StatefulWidget {
@@ -52,9 +52,9 @@ class _LoginPageState extends State<LoginPage> {
               PasswordField(
                   hintText: "Password", controller: passwordController),
               const SizedBox(height: 20),
-              const AuthGradientButton(
-                ButtonText: " Log In",
-              ),
+              // const AuthGradientButton(
+              //   ButtonText: " Log In",
+              // ),
               const SizedBox(height: 20),
               GestureDetector(
                 onTap: () {

@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:smart_paper/core/theme/theme.dart';
+import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:smart_paper/features/login-register/presentation/pages/SIgnUp.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Hive and open a box
+  await Hive.initFlutter();
+  await Hive.openBox('authBox'); // You can name the box as you prefer
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

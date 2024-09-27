@@ -24,6 +24,7 @@ class _PasswordFieldState extends State<PasswordField> {
       obscureText: !_isPasswordVisible,
       decoration: InputDecoration(
         hintText: widget.hintText,
+        border: OutlineInputBorder(), // Added a border for better UI
         suffixIcon: IconButton(
           icon: Icon(
             _isPasswordVisible ? Icons.visibility : Icons.visibility_off,
@@ -36,10 +37,14 @@ class _PasswordFieldState extends State<PasswordField> {
         ),
       ),
       validator: (value) {
-        if (value!.isEmpty) {
+        if (value == null || value.isEmpty) {
+          // Updated to handle null
           return "${widget.hintText} is missing";
+        } else if (value.length < 6) {
+          // Example: enforce a minimum length
+          return "Password must be at least 6 characters";
         }
-        return null;
+        return null; // Return null for valid input
       },
     );
   }

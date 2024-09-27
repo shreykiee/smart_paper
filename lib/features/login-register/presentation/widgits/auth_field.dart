@@ -1,25 +1,31 @@
 import 'package:flutter/material.dart';
 
 class AuthField extends StatelessWidget {
-  const AuthField(
-      {required this.hintText,
-      super.key,
-      required this.controller,
-      this.isconfidential = false});
+  const AuthField({
+    required this.hintText,
+    super.key,
+    required this.controller,
+    this.isConfidential = false,
+  });
+
   final String hintText;
   final TextEditingController controller;
-  final bool isconfidential;
+  final bool isConfidential;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText: isconfidential,
-      decoration: InputDecoration(hintText: hintText),
+      controller: controller, // Added the controller to the TextFormField
+      obscureText: isConfidential,
+      decoration: InputDecoration(
+        hintText: hintText,
+        border: OutlineInputBorder(), // Added a border for better UI
+      ),
       validator: (value) {
-        if (value!.isEmpty) {
+        if (value == null || value.isEmpty) {
           return "$hintText is missing";
         }
-        return "";
+        return null; // Return null for valid input
       },
     );
   }

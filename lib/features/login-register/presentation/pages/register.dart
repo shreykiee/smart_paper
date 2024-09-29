@@ -72,7 +72,7 @@ class _SignupPageState extends State<SignupPage> {
           // Show success message
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text(message),
-            backgroundColor: Colors.green,
+            backgroundColor: AppPallete.whiteColor,
           ));
 
           // Navigate to the home page or another appropriate page
@@ -89,7 +89,7 @@ class _SignupPageState extends State<SignupPage> {
           }
           ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
             content: Text('Signup failed. Please try again.'),
-            backgroundColor: Colors.red,
+            backgroundColor: AppPallete.errorColor,
           ));
         }
       } catch (e) {
@@ -98,7 +98,7 @@ class _SignupPageState extends State<SignupPage> {
         }
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text('Signup failed. Please try again.'),
-          backgroundColor: Colors.red,
+          backgroundColor: AppPallete.errorColor,
         ));
       }
     } else {
@@ -151,7 +151,7 @@ class _SignupPageState extends State<SignupPage> {
                 child: RichText(
                   text: TextSpan(
                     text: "Already have an account? ",
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.bodyMedium,
                     children: [
                       TextSpan(
                         text: "Log in",

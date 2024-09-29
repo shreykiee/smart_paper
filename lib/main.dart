@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smart_paper/core/theme/theme.dart';
-import 'package:flutter/material.dart';
+
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:smart_paper/features/login-register/presentation/pages/SIgnUp.dart';
+import 'package:smart_paper/features/login-register/presentation/pages/register.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

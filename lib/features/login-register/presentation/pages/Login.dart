@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_paper/core/theme/app_pallet.dart';
-import 'package:smart_paper/features/login-register/presentation/pages/SIgnUp.dart';
+import 'package:smart_paper/features/login-register/presentation/pages/register.dart';
 import 'package:smart_paper/features/login-register/presentation/widgits/auth_field.dart';
 
 import 'package:smart_paper/features/login-register/presentation/widgits/pass_field.dart';
@@ -63,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: RichText(
                   text: TextSpan(
                     text: "Don't have an account? ",
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.bodyMedium,
                     children: [
                       TextSpan(
                         text: "Sign up",

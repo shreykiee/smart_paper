@@ -2,13 +2,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:smart_paper/core/theme/app_pallet.dart';
-
-import 'package:smart_paper/features/Homepage/home_page.dart';
-import 'package:smart_paper/features/login-register/presentation/widgits/auth_field.dart';
-import 'package:smart_paper/features/login-register/presentation/widgits/auth_gradient_button.dart';
-import 'package:smart_paper/features/login-register/presentation/widgits/pass_field.dart';
-import 'package:smart_paper/features/login-register/services/signup-service.dart';
-import 'package:smart_paper/features/login-register/services/token_storage_service.dart';
+import 'package:smart_paper/pages/homepage/home_page.dart';
+import 'package:smart_paper/services/auth/signup-service.dart';
+import 'package:smart_paper/services/auth/token_storage_service.dart';
+import 'package:smart_paper/widgits/auth/auth_field.dart';
+import 'package:smart_paper/widgits/auth/auth_gradient_button.dart';
+import 'package:smart_paper/widgits/auth/pass_field.dart';
 
 import 'Login.dart';
 

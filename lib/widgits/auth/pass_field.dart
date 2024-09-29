@@ -24,7 +24,7 @@ class _PasswordFieldState extends State<PasswordField> {
       obscureText: !_isPasswordVisible,
       decoration: InputDecoration(
         hintText: widget.hintText,
-        border: OutlineInputBorder(), // Added a border for better UI
+        border: const OutlineInputBorder(), // Added a border for better UI
         suffixIcon: IconButton(
           icon: Icon(
             _isPasswordVisible ? Icons.visibility : Icons.visibility_off,

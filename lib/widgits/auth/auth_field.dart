@@ -19,7 +19,7 @@ class AuthField extends StatelessWidget {
       obscureText: isConfidential,
       decoration: InputDecoration(
         hintText: hintText,
-        border: OutlineInputBorder(), // Added a border for better UI
+        border: const OutlineInputBorder(), // Added a border for better UI
       ),
       validator: (value) {
         if (value == null || value.isEmpty) {

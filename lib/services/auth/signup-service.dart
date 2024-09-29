@@ -1,5 +1,6 @@
 // SignupService class
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 class SignupService {
   final Dio _dio = Dio();
@@ -19,12 +20,16 @@ class SignupService {
           'mobileNo': mobileNumber,
         },
       );
-      print(response);
+      if (kDebugMode) {
+        print(response);
+      }
       // Return the response data as a Map
       return response.data as Map<String, dynamic>;
     } catch (error) {
-      print('Error in signup service: $error');
-      throw error; // Rethrow error if needed for error handling
+      if (kDebugMode) {
+        print('Error in signup service: $error');
+      }
+      rethrow; // Rethrow error if needed for error handling
     }
   }
 }
